@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "b8211e1d684c1497",
+    "type": "split",
+    "children": [
+      {
+        "id": "d180299617b54af7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d3896d85dcb2865",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/t_post.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36d91371ba9a98da",
+    "type": "split",
+    "children": [
+      {
+        "id": "2dec99053d5a0eb7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fdaa12f55ff4caa1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3d9f40cb573c4edb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc1c2fa8d2333ae5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fb7ee3151f5cd734",
+    "type": "split",
+    "children": [
+      {
+        "id": "16eb5de7af31119b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5dcf8639cb586d35",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_templates/t_post.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7f41753061f56548",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_templates/t_post.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2118eb6d0c20f107",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bf33b417ec5b1267",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_templates/t_post.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "4d3896d85dcb2865",
+  "lastOpenFiles": [
+    "2024-05-01.md",
+    "_templates/t_post.md",
+    "2017-01-09-wechat-miniapp-ux.md",
+    "2016-09-22-the-open-web.md",
+    "2024-0425-rust.md",
+    "_templates",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "cs_idols/2019-09-13-peter-john-landin.md",
+    "data_rep/2020-06-19-data-rep-int.md",
+    "data_rep/2020-06-21-data-rep-todo.md",
+    "data_rep/2020-06-21-data-rep-float.md",
+    "read_sf_lf/2019-01-01-sf-lf-01-basics.md",
+    "hidden/2020-05-05-pl-chart.md"
+  ]
+}
