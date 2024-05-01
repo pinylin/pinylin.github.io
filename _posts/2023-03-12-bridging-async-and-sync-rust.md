@@ -1,6 +1,6 @@
 ---
 layout: post
-title: bridging-async-and-sync-rust
+title: bridging async and sync rust
 author: pinylin
 header-style: text
 catalog: true
@@ -10,7 +10,7 @@ tags:
 ---
 
 
-> refer: [bridging-async-and-sync-rust]([Bridging Async and Sync Rust Code - A lesson learned while working with Tokio | Greptime](https://greptime.com/blogs/2023-03-09-bridging-async-and-sync-rust))
+> refer: [Bridging Async and Sync Rust Code - A lesson learned while working with Tokio | Greptime](https://greptime.com/blogs/2023-03-09-bridging-async-and-sync-rust)
 
 ```rust
 impl Sequencer for PlainSequencer {
