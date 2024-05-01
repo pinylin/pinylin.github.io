@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-03-12 bridging-async-and-sync-rust.md",
+                "file": "_templates/t_post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-03-12 bridging-async-and-sync-rust.md",
+                "file": "_templates/t_post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-03-12 bridging-async-and-sync-rust.md",
+                "file": "_templates/t_post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-03-12 bridging-async-and-sync-rust.md"
+                "file": "_templates/t_post.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "4d3896d85dcb2865",
   "lastOpenFiles": [
-    "2021-01-19-the-systematic-failure-of-higher-education-in-china.md",
     "2023-03-12 bridging-async-and-sync-rust.md",
+    "2023-03-12-bridging-async-and-sync-rust.md",
+    "2021-01-19-the-systematic-failure-of-higher-education-in-china.md",
     "_templates/t_post.md",
     "2017-01-09-wechat-miniapp-ux.md",
     "2016-09-22-the-open-web.md",
