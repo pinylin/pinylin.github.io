@@ -1,8 +1,10 @@
+Hi, there! I'm pinylin.
+
 🔧 Backend engineer
 
 👨🏻‍💻 Write Go and Rust
 
-🔭 Know a little something about ML
+🔭 Know a little something about Databases
 
 
 <!-- ##### 技术演讲
