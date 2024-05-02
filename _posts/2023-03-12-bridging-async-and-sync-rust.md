@@ -1,6 +1,7 @@
 ---
 layout: post
 title: bridging async and sync rust
+subtitle: 连接 Rust 异步和同步代码
 author: pinylin
 header-style: text
 catalog: true

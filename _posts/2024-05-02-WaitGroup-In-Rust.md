@@ -9,6 +9,7 @@ tags:
   - WaitGroup
   - TaskTracker
   - no_std
+subtitle:
 ---
 Golang的WaitGroup非常直观好用, 那么Rust中有类似的Crates吗？当然, 最近在社区就看到了
 
