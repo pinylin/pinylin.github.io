@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-05-02-WaitGroup-In-Rust.md",
+                "file": "2021-12-27-Generics-in-Go.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-05-02-WaitGroup-In-Rust.md",
+                "file": "2021-12-27-Generics-in-Go.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-05-02-WaitGroup-In-Rust.md",
+                "file": "2021-12-27-Generics-in-Go.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-05-02-WaitGroup-In-Rust.md"
+                "file": "2021-12-27-Generics-in-Go.md"
               }
             }
           }
@@ -148,13 +148,14 @@
   },
   "active": "4d3896d85dcb2865",
   "lastOpenFiles": [
+    "2021-12-27-Generics-in-Go.md",
+    "data_rep/2020-06-21-data-rep-float.md",
+    "data_rep/2020-06-21-data-rep-todo.md",
+    "data_rep/2020-06-19-data-rep-int.md",
+    "2024-05-02-WaitGroup-In-Rust.md",
     "2023-04-22-Android 7.0+抓包.md",
     "2023-03-12-bridging-async-and-sync-rust.md",
     "_templates/t_post.md",
-    "data_rep/2020-06-19-data-rep-int.md",
-    "2024-05-02-WaitGroup-In-Rust.md",
-    "data_rep/2020-06-21-data-rep-todo.md",
-    "data_rep/2020-06-21-data-rep-float.md",
     "read_sf_qc/2019-09-02-sf-qc-02-typeclasses.md",
     "read_sf_plf/2019-03-01-sf-plf-01-equiv.md",
     "read_sf_lf/2019-01-01-sf-lf-01-basics.md",
