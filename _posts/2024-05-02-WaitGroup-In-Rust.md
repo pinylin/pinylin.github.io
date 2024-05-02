@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《JavaScript 二十年》推荐语
+title: WaitGroup In Rust
 author: pinylin
 header-style: text
 catalog: true
