@@ -1,5 +1,5 @@
 # Site settings
-title: Pinylin Blog
+title: 
 SEOTitle: 凭临的博客 | Pinylin Blog
 header-img: img/home-bg-g.jpg
 email: pinglinvip@gmail.com
@@ -13,10 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username: pinylin
-zhihu_username: pinylin
+# weibo_username: pinylin
+# zhihu_username: pinylin
 github_username: pinylin
-twitter_username: pinylin
+# twitter_username: pinylin
 #facebook_username:  pinylin
 #linkedin_username:  firstname-lastname-idxxxx
 
