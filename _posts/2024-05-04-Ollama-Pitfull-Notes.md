@@ -33,9 +33,10 @@ docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_API_BASE_
 - use CPU:  ollama serve
 
 1. 首先排查 CUDA_VISIBLE_DEVICES， 结果只有一张显卡(废话)
-	> lspci | grep VGA
-	
-2. rocm-sdk： 因为是Ryzen 5800h
+ ```sh
+ lspci | grep VGA	
+ ```
+1. rocm-sdk： 因为是Ryzen 5800h
 ```
 pacman -S rocm-hip-sdk rocm-opencl-sdk clblast go
 ```
