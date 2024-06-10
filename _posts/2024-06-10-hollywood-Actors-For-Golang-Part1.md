@@ -22,6 +22,7 @@ tags:
 ## Engine
 
 actor model核心, 负责生产`actor`, 向`actor`发送消息， 终止`actor`
+一个Engine 对应着 一个 post:port, 所以本地可以启动多个Engine, 参考bench代码
 
 ```Go
 type Engine struct {
@@ -62,6 +63,7 @@ A process is an abstraction over the actor.
 简单来说就是，先提供一个实现Receiver interface的 `p Producer`, 根据 `p Producer` 生成  `Process`, 然后 注册到 engine Registry, 并启动后, 就成了 Actor
 
 ### Spawn
+很明显，是用来生产Actor的
 ```Go
 func newProcess(e *Engine, opts Opts) *process {
 	pid := NewPID(e.address, opts.Kind+pidSeparator+opts.ID)
@@ -113,7 +115,7 @@ type Processer interface {
 }
 ```
 ## Remoter
-
+Remoter接口是一个用于打破 `Engine` 和 `Remote` 之间循环依赖的接口。  `Engine` 需要能够向远程发送消息,但 `Remote` 也需要能够向 `Engine` 发送消息
 ```Go
 type Remoter interface {
 	Address() string
@@ -150,14 +152,14 @@ r.streamRouterPID = r.engine.Spawn(
 ```
 
 
-### 发送Msg
+### 向Remote Engine发送一条消息的过程
 
-向Remote 发送Msg, 首先确定一下 
+向Remote 发送Msg, 我们首先确定一下 本地的资源
 - Engine  : NewEngine WithRemote
 - serverPID ->  `*PID`  remote 地址
 - clientPID :  `*PID` 必须有 本地Actor
 
-现在开始
+现在开始发送
 
 1. 直接用调用Engine 发送消息
 ```Go
@@ -198,7 +200,6 @@ swpid = s.engine.SpawnProc(newStreamWriter(s.engine, s.pid, address, s.tlsConfig
 ```
 
 4. `streamWriter` 也是 一个Actor, Receive 消息之后 放入Inbox, 然后通过 Inbox.run() 发送到remote
-
 ```Go
 func (in *Inbox) run() {
 			in.proc.Invoke(msgs)
@@ -207,11 +208,10 @@ func (in *Inbox) run() {
 func (s *streamWriter) Invoke(msgs []actor.Envelope) {
 	if err := s.stream.Send(env); err != nil {}
 }
-
 ```
 
-- 总结
 
+### 总结
 1. e.SendWithSender
 2. `streamRouter` Actor
 3. `streamWriter` Actor -> Inbox -> Inbox.run() -> s.stream.Send
