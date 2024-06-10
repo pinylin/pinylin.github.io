@@ -9,10 +9,9 @@ tags:
   - Actor
   - Golang
 ---
+ - [workflows-as-actors-is-it-really-possible](https://temporal.io/blog/workflows-as-actors-is-it-really-possible)
+
 >  最近看到 [hollywood](https://github.com/anthdm/hollywood)项目, 刚好之前了解过temporal, 发现 temporal跟  actor model真的好像呀。 所以有时间看看hollywood代码
-
-- [workflows-as-actors-is-it-really-possible](https://temporal.io/blog/workflows-as-actors-is-it-really-possible)
-
 
 
 - actor model
@@ -199,6 +198,7 @@ swpid = s.engine.SpawnProc(newStreamWriter(s.engine, s.pid, address, s.tlsConfig
 ```
 
 4. `streamWriter` 也是 一个Actor, Receive 消息之后 放入Inbox, 然后通过 Inbox.run() 发送到remote
+
 ```Go
 func (in *Inbox) run() {
 			in.proc.Invoke(msgs)
