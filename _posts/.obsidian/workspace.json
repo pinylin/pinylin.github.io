@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d180299617b54af7",
+        "id": "99a3176e7f49fa87",
         "type": "tabs",
         "children": [
           {
-            "id": "4d3896d85dcb2865",
+            "id": "2bcd811d540fe346",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-05-04-Ollama-Pitfull-Notes.md",
+                "file": "2024-06-10-hollywood-Actors-For-Golang.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-05-04-Ollama-Pitfull-Notes.md",
+                "file": "2024-06-10-hollywood-Actors-For-Golang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-05-04-Ollama-Pitfull-Notes.md",
+                "file": "2024-06-10-hollywood-Actors-For-Golang.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,11 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-05-04-Ollama-Pitfull-Notes.md"
+                "file": "2024-06-10-hollywood-Actors-For-Golang.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -146,17 +147,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4d3896d85dcb2865",
+  "active": "2bcd811d540fe346",
   "lastOpenFiles": [
-    "_templates/t_post.md",
     "2024-05-04-Ollama-Pitfull-Notes.md",
+    "2023-03-12-bridging-async-and-sync-rust.md",
+    "2024-06-10-hollywood-Actors-For-Golang.md",
+    "2024-05-02-WaitGroup-In-Rust.md",
+    "未命名.canvas",
+    "_templates/t_post.md",
     "2021-12-27-Generics-in-Go.md",
     "data_rep/2020-06-21-data-rep-float.md",
     "data_rep/2020-06-21-data-rep-todo.md",
     "data_rep/2020-06-19-data-rep-int.md",
-    "2024-05-02-WaitGroup-In-Rust.md",
     "2023-04-22-Android 7.0+抓包.md",
-    "2023-03-12-bridging-async-and-sync-rust.md",
     "read_sf_qc/2019-09-02-sf-qc-02-typeclasses.md",
     "read_sf_plf/2019-03-01-sf-plf-01-equiv.md",
     "read_sf_lf/2019-01-01-sf-lf-01-basics.md",
@@ -167,7 +170,6 @@
     "2024-0425-rust.md",
     "_templates",
     "未命名 1.canvas",
-    "未命名.canvas",
     "cs_idols/2019-09-13-peter-john-landin.md",
     "hidden/2020-05-05-pl-chart.md"
   ]
