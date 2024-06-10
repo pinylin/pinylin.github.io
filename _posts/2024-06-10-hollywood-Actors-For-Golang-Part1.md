@@ -200,6 +200,7 @@ swpid = s.engine.SpawnProc(newStreamWriter(s.engine, s.pid, address, s.tlsConfig
 ```
 
 4. `streamWriter` 也是 一个Actor, Receive 消息之后 放入Inbox, 然后通过 Inbox.run() 发送到remote
+
 ```Go
 func (in *Inbox) run() {
 			in.proc.Invoke(msgs)
