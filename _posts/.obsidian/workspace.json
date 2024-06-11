@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
+                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
+                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
+                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-06-10-hollywood-Actors-For-Golang-Part1.md"
+                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md"
               }
             }
           }
@@ -149,9 +149,11 @@
   },
   "active": "2bcd811d540fe346",
   "lastOpenFiles": [
+    "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
+    "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
+    "cs_idols/2019-09-13-peter-john-landin.md",
     "2024-05-04-Ollama-Pitfull-Notes.md",
     "2023-03-12-bridging-async-and-sync-rust.md",
-    "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
     "2024-05-02-WaitGroup-In-Rust.md",
     "未命名.canvas",
     "_templates/t_post.md",
@@ -170,7 +172,6 @@
     "2024-0425-rust.md",
     "_templates",
     "未命名 1.canvas",
-    "cs_idols/2019-09-13-peter-john-landin.md",
     "hidden/2020-05-05-pl-chart.md"
   ]
 }
