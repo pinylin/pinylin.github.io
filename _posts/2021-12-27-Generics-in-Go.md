@@ -65,7 +65,7 @@ Generics 是指把类型抽象成一种 “参数” ， 数据和算法都针�
 
 ## Type parameters
 
-```Go
+```go
 // Print prints the elements of any slice.
 // Print has a type parameter T and has a single (non-type)
 // parameter s which is a slice of that type parameter.
@@ -78,7 +78,7 @@ func Print[T any](s []T) {
 
 - Type inference(类型推断)
 
-```Go
+```go
         // pass a type argument explicitly
         Print[int]([]int{1, 2, 3})
         
@@ -254,7 +254,7 @@ https://github.com/golang/go/blob/master/src/constraints/constraints.go
 
 Type set 的目的是允许泛型函数使用运算符，比如<
 
-```Go
+```go
 // Ordered is a constraint that permits any ordered type: any type
 // that supports the operators < <= >= >.
 // If future releases of Go add new ordered types,
@@ -272,7 +272,7 @@ type Ordered interface {
 
 Comparable 的 type set 包含 struct, array, and interface types. 没有func, 所以会有这个[问题](https://github.com/golang/go/issues/49587)。也没有slice
 
-```Go
+```go
 // Index returns the index of x in s, or -1 if not found.
 func Index[T comparable](s []T, x T) int {
         for i, v := range s {
@@ -288,7 +288,7 @@ func Index[T comparable](s []T, x T) int {
 
 Since `comparable` is a constraint, it can be embedded in another interface type used as a constraint.
 
-```Go
+```go
 // ComparableHasher is a type constraint that matches all
 // comparable types with a Hash method.
 type ComparableHasher interface {

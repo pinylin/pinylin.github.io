@@ -24,7 +24,7 @@ tags:
 actor model核心, 负责生产`actor`, 向`actor`发送消息， 终止`actor`
 一个Engine 对应着 一个 post:port, 所以本地可以启动多个Engine, 参考bench代码
 
-```Go
+```go
 type Engine struct {
 	Registry *Registry //注册、查找 Processer
 	address string     // host:prot
@@ -34,7 +34,7 @@ type Engine struct {
 }
 ```
 
-```Go
+```go
 //  
 type Registry struct {
 	mu sync.RWMutex
@@ -44,7 +44,7 @@ type Registry struct {
 ```
 ## Receiver / Actor
 
-```Go
+```go
 // Producer is any function that can return a Receiver
 type Producer func() Receiver
 
@@ -64,7 +64,7 @@ A process is an abstraction over the actor.
 
 ### Spawn
 很明显，是用来生产Actor的
-```Go
+```go
 func newProcess(e *Engine, opts Opts) *process {
 	pid := NewPID(e.address, opts.Kind+pidSeparator+opts.ID)
 	ctx := newContext(opts.Context, e, pid)
@@ -80,7 +80,7 @@ func newProcess(e *Engine, opts Opts) *process {
 }
 ```
 
-```Go
+```go
 func (e *Engine) Spawn(p Producer, kind string, opts ...OptFunc) *PID {
 	options := DefaultOpts(p)
 	... ...
@@ -96,7 +96,7 @@ func (e *Engine) SpawnProc(p Processer) *PID {
 ```
 ### SpawnFunc
 也可以直接把 `f func(*Context)` 直接传给 `e.SpawnFunc` 内部会自己实现一个 Receiver, 然后 P -> process -> Actor
-```Go
+```go
 // SpawnFunc spawns the given function as a stateless receiver/actor.
 func (e *Engine) SpawnFunc(f func(*Context), kind string, opts ...OptFunc) *PID {
 	return e.Spawn(newFuncReceiver(f), kind, opts...)
@@ -104,7 +104,7 @@ func (e *Engine) SpawnFunc(f func(*Context), kind string, opts ...OptFunc) *PID 
 ```
 ## Processer
 看注释，就是对 process 能力的抽象， 实现的接口的struct, 就可以被 Engine注册, 启动, 成为Actor
-```Go
+```go
 // Processer is an interface the abstracts the way a process behaves.
 type Processer interface {
 	Start()
@@ -116,7 +116,7 @@ type Processer interface {
 ```
 ## Remoter
 Remoter接口是一个用于打破 `Engine` 和 `Remote` 之间循环依赖的接口。  `Engine` 需要能够向远程发送消息,但 `Remote` 也需要能够向 `Engine` 发送消息
-```Go
+```go
 type Remoter interface {
 	Address() string
 	Send(*PID, any, *PID)
@@ -137,13 +137,13 @@ type Remote struct {
 ```
 
 如下，初始化一个 有 `Remoter` 的 Engine, 在 NewEngine 中 `Remoter`会 自己`Start()`建立连接
-```Go
+```go
 rem := remote.New(*listenAt, remote.NewConfig())
 actor.NewEngine(actor.NewEngineConfig().WithRemote(rem))
 ```
 
 在`Start()` 中 还Spawn 了 一个 Actor `streamRouterPID`
-```Go
+```go
 func (r *Remote) Start(e *actor.Engine) error {
 // ... ...
 r.streamRouterPID = r.engine.Spawn(
@@ -162,7 +162,7 @@ r.streamRouterPID = r.engine.Spawn(
 现在开始发送
 
 1. 直接用调用Engine 发送消息
-```Go
+```go
 	e.SendWithSender(serverPID, msg, clientPID)
 
 		// 1. 如果serverPID是本地pid, 
@@ -173,7 +173,7 @@ r.streamRouterPID = r.engine.Spawn(
 		e.remote.Send(pid, msg, sender)
 ```
 2. 如果需要Send 到 remote 的Msg, 会 route 到 `streamRouterPID` 对应的Actor
-```Go
+```go
 func (r *Remote) Send(pid *actor.PID, msg any, sender *actor.PID) {
 	r.engine.Send(r.streamRouterPID, &streamDeliver{
 		target: pid,
@@ -183,7 +183,7 @@ func (r *Remote) Send(pid *actor.PID, msg any, sender *actor.PID) {
 }
 ```
 3.  `streamRouter` Actor, `streamRouterPID` 对应的Actor,  就是 实现了 Receive 的 `streamRouter`
-```Go
+```go
 // ... ...
 func (s *streamRouter) Receive(ctx *actor.Context) {
 	switch msg := ctx.Message().(type) {
@@ -201,7 +201,7 @@ swpid = s.engine.SpawnProc(newStreamWriter(s.engine, s.pid, address, s.tlsConfig
 
 4. `streamWriter` 也是 一个Actor, Receive 消息之后 放入Inbox, 然后通过 Inbox.run() 发送到remote
 
-```Go
+```go
 func (in *Inbox) run() {
 			in.proc.Invoke(msgs)
 }

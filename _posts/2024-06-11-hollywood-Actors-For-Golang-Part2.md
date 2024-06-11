@@ -20,7 +20,7 @@ tags:
 1.  e.Registry.get(pid),  获取`Processer`
 2. 如果没有`Processer`，发送给`DeadLetter process`
 3. `DeadLetter process` 也没有， panic
-```Go
+```go
 // SendLocal will send the given message to the given PID. If the recipient is not found in the
 // registry, the message will be sent to the DeadLetter process instead. If there is no deadletter
 // process registered, the function will panic.
@@ -42,13 +42,13 @@ func (e *Engine) SendLocal(pid *PID, msg any, sender *PID) {
 ### 消息写入了Inbox
 无论是Local还是Remote, 收到消息后，最后都走到了process.Send，然后 `Inbox.Send`
 
-```Go
+```go
 func (p *process) Send(_ *PID, msg any, sender *PID) {
 	p.inbox.Send(Envelope{Msg: msg, Sender: sender})
 }
 ```
 
-```Go
+```go
 func (in *Inbox) Send(msg Envelope) {
 	in.rb.Push(msg)
 	in.schedule()
@@ -56,7 +56,7 @@ func (in *Inbox) Send(msg Envelope) {
 ```
 
 我们来详细看下 Inbox
-```Go
+```go
 type Inbox struct {
 	// 虽然README写的超出size后会block, 但代码确实是resize后push
 	rb         *ringbuffer.RingBuffer[Envelope]  // 环形队列, buffer resize规则是*2
@@ -75,7 +75,7 @@ type Inbox struct {
 3. `streamReader` Actor
 `streamWriter` 调用底层的 `drpc` 发送， 然后 `streamReader` 这边的 `drpc` `/remote.Remote/Receive` 收到 `envelope`(这个概念就是Msg的封装，加了发送和接收的`*actor.PID`)  
 
-```Go
+```go
 type DRPCRemote_ReceiveStream interface {
 	drpc.Stream
 	Send(*Envelope) error
@@ -84,7 +84,7 @@ type DRPCRemote_ReceiveStream interface {
 ```
 
 下面来看一下 `streamReader` Actor 的 `Receive`,  r.remote.engine 就是本地Engine, 后面的逻辑和 上面的 Local 一致
-```Go
+```go
 func (r *streamReader) Receive(stream DRPCRemote_ReceiveStream) error {
 	for {
 		envelope, err := stream.Recv()
@@ -103,7 +103,7 @@ func (r *streamReader) Receive(stream DRPCRemote_ReceiveStream) error {
 
 上面说到，消息最后是被写入了 `Inbox`，后续对 `Inbox` 中消息的处理是如何进行的呢？
 处理消息的方法如下, 最后会执行 `process` 实现的`Receive` 方法
-```Go
+```go
 func (p *process) Invoke(msgs []Envelope) {
 	p.invokeMsg(msg)
 }
@@ -119,7 +119,7 @@ process刚启动注册，先执行一下Inbox里所有的缓存Msgs
 
 ## 2. Inbox  收到消息之后
 
-```Go
+```go
 func (in *Inbox) Send(msg Envelope) {
 		in.rb.Push(msg)  // 先向rb push msg
 		in.schedule()    // 如果in.procStatus 是 idle, 改为 running
@@ -143,7 +143,7 @@ func (in *Inbox) process() {
 
 重点在 Inbox.run() 
 
-```Go
+```go
 func (in *Inbox) run() {
 	// Throughput 项目默认300， 也就是说, 每执行300次in.rb.PopN 后会主动调用
 	// runtime.Gosched() 让出processor(GMP: P)

@@ -16,7 +16,7 @@ Golang的WaitGroup非常直观好用, 那么Rust中有类似的Crates吗？当�
 ## wg
 
 支持同步, 异步(不依赖特定运行时), no_std环境的的使用方法像Golang一样的WaitGroup
-```Rust
+```rust
 #[tokio::main]
 async fn main() {
     let wg = AsyncWaitGroup::new();
@@ -34,7 +34,7 @@ async fn main() {
 ## TaskTracker
 
 tokio官方, 如果你用tokio runtime的话, 更推荐这个
-```Rust
+```rust
 use tokio_util::task::TaskTracker;
 
 #[tokio::main]

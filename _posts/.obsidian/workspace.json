@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "```go",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -149,12 +150,12 @@
   },
   "active": "2bcd811d540fe346",
   "lastOpenFiles": [
+    "2023-03-12-bridging-async-and-sync-rust.md",
+    "2024-05-02-WaitGroup-In-Rust.md",
     "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
     "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
     "cs_idols/2019-09-13-peter-john-landin.md",
     "2024-05-04-Ollama-Pitfull-Notes.md",
-    "2023-03-12-bridging-async-and-sync-rust.md",
-    "2024-05-02-WaitGroup-In-Rust.md",
     "未命名.canvas",
     "_templates/t_post.md",
     "2021-12-27-Generics-in-Go.md",
