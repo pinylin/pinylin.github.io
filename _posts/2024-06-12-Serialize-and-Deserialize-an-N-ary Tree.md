@@ -9,6 +9,8 @@ tags:
   - Tree
   - Serialize
   - Deserialize
+  - Pool
+  - Goroutine
 ---
 
 > 今天面试，碰到了比较开放性的两个问题，如果当时有纸有笔可以写写画画的话，可能就碰巧碰出火花了，人脑缓存不够，深表遗憾
