@@ -161,3 +161,42 @@ func (p *Pool) worker(task func()) {
 	}
 }
 ```
+
+### 补一下benchmark
+确实有提升，，，
+```shell
+BenchmarkNormalGoroutine
+BenchmarkNormalGoroutine-8       1712344               694.2 ns/op
+BenchmarkPool
+BenchmarkPool-8                  2194712               599.1 ns/op
+
+```
+
+```go
+func BenchmarkNormalGoroutine(b *testing.B) {  
+   b.ResetTimer()  
+   for i := 0; i < b.N; i++ {  
+      finish := make(chan struct{})  
+      go func() {  
+         for k := 0; k < 100; k++ {  
+            _ = k  
+         }  
+         finish <- struct{}{}  
+      }()  
+      <-finish  
+   }  
+}  
+  
+func BenchmarkPool(b *testing.B) {  
+   p := NewPool(100, 60, 80)  
+   //defer p.Close()  没实现
+   b.ResetTimer()  
+   for i := 0; i < b.N; i++ {  
+      p.Schedule(func() {  
+         for k := 0; k < 100; k++ {  
+            _ = k  
+         }  
+      })  
+   }  
+}
+```
