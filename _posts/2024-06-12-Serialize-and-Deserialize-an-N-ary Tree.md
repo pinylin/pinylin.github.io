@@ -16,14 +16,18 @@ tags:
 # Serialize and Deserialize an N-ary Tree
 
 本来的题目是N 没有限制，但是在具体实现上child 用array 存储的话，没差别
-具体参考: [Serialize and Deserialize an N-ary Tree](https://www.geeksforgeeks.org/serialize-deserialize-n-ary-tree/)    blog 里没有Go实现
-我来补充一下
+
+具体参考: [Serialize and Deserialize an N-ary Tree](https://www.geeksforgeeks.org/serialize-deserialize-n-ary-tree/)   
+
+blog 里没有Go实现我来补充一下
 ```go
 package main  
   
 import (  
    "bufio"  
-   "fmt"   "os")  
+   "fmt"   
+   "os"
+)  
   
 type Node struct {  
    key    rune  
@@ -84,7 +88,6 @@ func traverse(root *Node) {
   
 func main() {  
    root := createDummyTree()  
-  
    file, err := os.Create("tree.txt")  
    if err != nil {  
       fmt.Println("Could not open file")  
@@ -96,7 +99,6 @@ func main() {
    //file, err := os.Open("tree.txt")  
    //if err != nil {   // fmt.Println("Could not open file")   // return   //}   //defer file.Close()   r := bufio.NewReader(file)  
    root1 := deserialize(r)  
-  
    fmt.Println("Constructed N-Ary Tree from file is")  
    traverse(root1)  
 }
