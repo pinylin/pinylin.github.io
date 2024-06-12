@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "99a3176e7f49fa87",
+        "id": "e51fcf8db5209be7",
         "type": "tabs",
         "children": [
           {
-            "id": "2bcd811d540fe346",
+            "id": "7298814f053c2c70",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
+                "file": "2024-06-12-Serialize-and-Deserialize-an-N-ary Tree.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "```go",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
+                "file": "2024-06-12-Serialize-and-Deserialize-an-N-ary Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
+                "file": "2024-06-12-Serialize-and-Deserialize-an-N-ary Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-06-11-hollywood-Actors-For-Golang-Part2.md"
+                "file": "2024-06-12-Serialize-and-Deserialize-an-N-ary Tree.md"
               }
             }
           }
@@ -148,16 +147,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "2bcd811d540fe346",
+  "active": "7298814f053c2c70",
   "lastOpenFiles": [
+    "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
+    "2024-06-12-Serialize-and-Deserialize-an-N-ary Tree.md",
+    "_templates/t_post.md",
     "2023-03-12-bridging-async-and-sync-rust.md",
     "2024-05-02-WaitGroup-In-Rust.md",
     "2024-06-10-hollywood-Actors-For-Golang-Part1.md",
-    "2024-06-11-hollywood-Actors-For-Golang-Part2.md",
     "cs_idols/2019-09-13-peter-john-landin.md",
     "2024-05-04-Ollama-Pitfull-Notes.md",
     "未命名.canvas",
-    "_templates/t_post.md",
     "2021-12-27-Generics-in-Go.md",
     "data_rep/2020-06-21-data-rep-float.md",
     "data_rep/2020-06-21-data-rep-todo.md",
