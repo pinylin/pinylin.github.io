@@ -13,7 +13,7 @@ tags:
 
 > 新年快乐，今年的跨年我选择在酒店构建ClickHouse。顺便总结一下最近用到的ClickHouse full_text index
 
-![](img/in-post/post-build-clickhouse.png)
+![](/img/in-post/post-build-clickhouse.png)
 ## 构建arm binary
 
 有些信创项目用的arm服务器，由于没有SSE4_2 指令，所以需要自己构建ClickHouse
