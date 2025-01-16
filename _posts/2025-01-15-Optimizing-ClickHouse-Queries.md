@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A Step by Step Troubleshooting Journey
-subtitle: 
+title: Optimizing ClickHouse Queries
+subtitle: A Step by Step Troubleshooting Journey
 author: pinylin
 header-style: text
 catalog: true
