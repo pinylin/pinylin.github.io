@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimizing ClickHouse Queries
+title: Optimizing ClickHouse Queries Part2
 subtitle: Full Text Search By Quickwit
 author: pinylin
 header-style: text
@@ -24,8 +24,13 @@ So, my choice is:  **quickwit**: [add-full-text-search-to-your-olap-db](https://
 Still using the previous HackerNews test data
 
 - hackernews.json
-```
 
+```sh
+#  test data
+17G Jan 22 11:06 hackernews.json
+
+# quickwit indexes
+7.1G	indexes
 ```
 
 ### Create a Quickwit index
@@ -67,6 +72,7 @@ quickwit index ingest --input-path hackernews.json --index hackernews
 ```
 
 - test quickwit index 
+
 ```sh
 curl "http://127.0.0.1:7280/api/v1/hackernews/search/stream?query=tantivy&output_format=csv&fast_field=Id"
 ```
@@ -76,6 +82,7 @@ curl "http://127.0.0.1:7280/api/v1/hackernews/search/stream?query=tantivy&output
 
 
 1. The fields(used by search stream) must be configured as fast_field in the Quickwit index.
+
 ```yaml
 # eg. Id
     - name: Id
@@ -93,7 +100,7 @@ The official statement from Quickwit:
 > The search stream endpoint is powerful enough to stream 100 million ids to ClickHouse in less than 2 seconds on a multi TB dataset. And you should be comfortable playing with search stream on even bigger datasets.
 
 
-Through testing, it’s indeed the case. The Hackernews test data, which consists of up to 28 million rows and an 18GB JSON file on disk, shows that most queries complete in under 0.2 seconds.
+Through testing, it’s indeed the case. The Hackernews test data, which consists of up to 28 million rows and an 17GB JSON file on disk, shows that most queries complete in under 0.2 seconds.
 
 ## Our solution
 

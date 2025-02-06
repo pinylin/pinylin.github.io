@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimizing ClickHouse Queries
+title: Optimizing ClickHouse Queries Part1
 subtitle: A Step by Step Troubleshooting Journey
 author: pinylin
 header-style: text
